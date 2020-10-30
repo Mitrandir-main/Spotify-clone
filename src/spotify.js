@@ -2,7 +2,7 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "433223f2afd14673a76c52e337d6a6f6";
-const redirectUri = "https://spotify-e4f97.web.app/";
+const redirectUri = "https://didosspotify.web.app/";
 // const redirectUri = "http://localhost:3000/";
 
 const scopes = [
