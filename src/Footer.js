@@ -77,11 +77,19 @@ function Footer({ spotify }) {
   return (
     <div className="footer">
       <div className="footer__left">
-        <img
-          className="footer__albumLogo"
-          src={item?.album.images[0].url}
-          alt={item?.name}
-        />
+        {item ? (
+          <img
+            className="footer__albumLogo"
+            src={item?.album.images[0].url}
+            alt={item?.name}
+          />
+        ) : (
+          <img
+            className="footer__albumLogo"
+            src="https://upload.wikimedia.org/wikipedia/en/6/69/ImagineCover.jpg"
+            alt=""
+          />
+        )}
         {item ? (
           <div className="footer__songInfo">
             <h4>{item.name}</h4>
@@ -89,8 +97,8 @@ function Footer({ spotify }) {
           </div>
         ) : (
           <div className="footer__songInfo">
-            <h4>No song is playing</h4>
-            <p>...</p>
+            <h4>Imagine</h4>
+            <p>John Lennon</p>
           </div>
         )}
       </div>
